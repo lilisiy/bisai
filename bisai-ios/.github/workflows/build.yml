@@ -24,7 +24,7 @@ jobs:
         xcodebuild \
           -project bisai-ios.xcodeproj \
           -scheme bisai_ios \
-          -configuration Release \
+          -configuration Product \
           -sdk iphoneos \
           -destination 'generic/platform=iOS' \
           -archivePath build/bisai-ios.xcarchive \
