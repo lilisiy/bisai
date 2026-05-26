@@ -1,0 +1,205 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A001 /* bisai_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001; };
+		A002 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002; };
+		A003 /* BafaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003; };
+		A004 /* CameraStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B001 /* bisai_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bisai_iosApp.swift; sourceTree = "<group>"; };
+		B002 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B003 /* BafaClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/BafaClient.swift; sourceTree = "<group>"; };
+		B004 /* CameraStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/CameraStreamView.swift; sourceTree = "<group>"; };
+		C001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D001 /* bisai-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bisai-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		G01 = {
+			isa = PBXGroup;
+			children = (
+				G02 /* bisai-ios */,
+				G03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G02 /* bisai-ios */ = {
+			isa = PBXGroup;
+			children = (
+				B001 /* bisai_iosApp.swift */,
+				B002 /* HomeView.swift */,
+				B003 /* BafaClient.swift */,
+				B004 /* CameraStreamView.swift */,
+				C001 /* Info.plist */,
+			);
+			path = "bisai-ios";
+			sourceTree = "<group>";
+		};
+		G03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D001 /* bisai-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T01 /* bisai-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = XC01;
+			buildPhases = (
+				S01 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "bisai-ios";
+			productName = "bisai-ios";
+			productReference = D001 /* bisai-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P01 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = XC02;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"zh-Hans",
+			);
+			mainGroup = G01;
+			productRefGroup = G03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T01 /* bisai-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		S01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A001 /* bisai_iosApp.swift in Sources */,
+				A002 /* HomeView.swift in Sources */,
+				A003 /* BafaClient.swift in Sources */,
+				A004 /* CameraStreamView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		XC_DEBUG /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		XC_RELEASE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		XC_PRODUCT /* Product */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "bisai-ios/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "倒车影像";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bisai.ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Product;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		XC01 /* Build configuration list for PBXNativeTarget "bisai-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				XC_PRODUCT /* Product */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		XC02 /* Build configuration list for PBXProject "bisai-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				XC_DEBUG /* Debug */,
+				XC_RELEASE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P01 /* Project object */;
+}

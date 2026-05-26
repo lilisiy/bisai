@@ -1,0 +1,49 @@
+name: Build iOS App
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  build:
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '16.0'
+    
+    - name: Build unsigned IPA
+      run: |
+        cd bisai-ios
+        xcodebuild \
+          -project bisai-ios.xcodeproj \
+          -scheme bisai_ios \
+          -configuration Release \
+          -sdk iphoneos \
+          -destination 'generic/platform=iOS' \
+          -archivePath build/bisai-ios.xcarchive \
+          archive \
+          CODE_SIGNING_ALLOWED=NO \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGN_IDENTITY="" \
+          DEVELOPMENT_TEAM="" \
+          PROVISIONING_PROFILE_SPECIFIER=""
+        
+        # 从 xcarchive 创建 IPA
+        mkdir -p Payload
+        cp -r build/bisai-ios.xcarchive/Products/Applications/bisai-ios.app Payload/
+        zip -r bisai-ios.ipa Payload
+        rm -rf Payload
+    
+    - name: Upload IPA
+      uses: actions/upload-artifact@v4
+      with:
+        name: bisai-ios.ipa
+        path: bisai-ios/bisai-ios.ipa
+        retention-days: 90
